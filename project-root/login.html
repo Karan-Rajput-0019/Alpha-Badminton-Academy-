@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login | Alpha Badminton Academy</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="auth-page">
+    <div class="auth-container">
+      <h1>Welcome Back</h1>
+      <p>Sign in to continue or create a new account</p>
+
+      <form class="form auth-form" id="signin-form">
+        <h2>Sign In</h2>
+        <label>Email <input type="email" id="email" required /></label>
+        <label>Password <input type="password" id="password" required /></label>
+        <label>Role
+          <select id="role">
+            <option value="player">Player</option>
+            <option value="coach">Coach/Admin</option>
+          </select>
+        </label>
+        <label class="remember">
+          <input type="checkbox" id="rememberMe" /> Remember Me
+        </label>
+        <button type="submit" class="btn primary">Sign In</button>
+        <p><a href="forgot-password.html" class="link">Forgot Password?</a></p>
+      </form>
+
+      <form class="form auth-form" id="signup-form">
+        <h2>Sign Up</h2>
+        <label>Full Name <input type="text" required /></label>
+        <label>Email <input type="email" required /></label>
+        <label>Password <input type="password" required /></label>
+        <button type="submit" class="btn">Sign Up</button>
+      </form>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

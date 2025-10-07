@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Coach Dashboard | Alpha Badminton Academy</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="dashboard">
+    <div class="container">
+      <section class="welcome-card">
+        <h1>Welcome Coach!</h1>
+        <p>Manage your academy from here.</p>
+      </section>
+
+      <section class="grid-3">
+        <div class="card"><h2>Total Players</h2><p>42</p></div>
+        <div class="card"><h2>Today’s Sessions</h2><p>3</p></div>
+        <div class="card"><h2>Upcoming Tournaments</h2><p>2</p></div>
+      </section>
+
+      <section class="card player-table">
+        <h2>Player Management</h2>
+        <table>
+          <tr><th>Name</th><th>Attendance</th><th>Actions</th></tr>
+          <tr><td>Karan Singh</td><td>85%</td><td><button>Edit</button></td></tr>
+          <tr><td>Ravi Patil</td><td>78%</td><td><button>Edit</button></td></tr>
+        </table>
+      </section>
+
+      <section class="card">
+        <h2>Schedule Manager</h2>
+        <form>
+          <input type="text" placeholder="Session Title" />
+          <input type="datetime-local" />
+          <input type="text" placeholder="Location" />
+          <button class="btn primary">Add Session</button>
+        </form>
+      </section>
+
+      <section class="card">
+        <h2>Tournament Manager</h2>
+        <form>
+          <input type="text" placeholder="Tournament Name" />
+          <input type="date" />
+          <button class="btn primary">Create Tournament</button>
+        </form>
+      </section>
+
+      <section class="card">
+        <h2>Announcements</h2>
+        <textarea placeholder="Write your announcement..."></textarea>
+        <button class="btn primary">Post Announcement</button>
+      </section>
+    </div>
+  </main>
+
+  <!-- Tour Overlay -->
+  <div id="tour-overlay" class="tour-overlay hidden"></div>
+  <div id="tour-tooltip" class="tour-tooltip hidden">
+    <h3 id="tour-title"></h3>
+    <p id="tour-text"></p>
+    <div class="tour-actions">
+      <button id="tour-prev" class="btn">Back</button>
+      <button id="tour-next" class="btn primary">Next</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Profile Settings | Alpha Badminton Academy</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="auth-page">
+    <div class="auth-container">
+      <h1>Profile Settings</h1>
+      <p>Update your personal information and preferences</p>
+
+      <form class="form auth-form" id="profile-form">
+        <!-- Personal Info -->
+        <label>Full Name
+          <input type="text" id="fullName" value="Karan Singh" required />
+        </label>
+        <label>Email
+          <input type="email" id="email" value="karan@example.com" required />
+        </label>
+        <label>Phone
+          <input type="tel" id="phone" placeholder="+91 98765 43210" />
+        </label>
+
+        <!-- Training Preferences -->
+        <label>Preferred Training Time
+          <select id="trainingTime">
+            <option value="morning">Morning (6–9 AM)</option>
+            <option value="evening">Evening (5–8 PM)</option>
+          </select>
+        </label>
+        <label>Preferred Location
+          <input type="text" id="location" placeholder="Jilha Stadium / Orchid School" />
+        </label>
+
+        <!-- Password Update -->
+        <label>New Password
+          <input type="password" id="newPassword" placeholder="Leave blank to keep current" />
+        </label>
+
+        <button type="submit" class="btn primary">Save Changes</button>
+      </form>
+
+      <p><a href="dashboard.html" class="link">← Back to Dashboard</a></p>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById('profile-form')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert("Profile updated successfully!");
+      window.location.href = "dashboard.html";
+    });
+  </script>
+</body>
+</html>
